@@ -115,7 +115,6 @@ export default {
   transform: rotate(-90deg);
 
 }
-
 html,
 body {
   margin: 0;
@@ -145,6 +144,82 @@ h1 {
   margin-top: 5.1rem;
   margin-left: 13.5rem;
   color: #f5f9fb;
+}
+
+@media only screen and (max-width: 450px) and (min-width: 400px) {
+
+.aniol {
+  float:left;
+  margin-left:-8rem;
+  margin-top: 8rem; 
+  
+}
+.aniolvideo {
+  position: absolute;
+  filter:blur(0.1rem);
+  z-index: -1px;
+}
+.aniolmaeso {
+  position: relative;
+  margin-top: -1.5rem;
+  margin-left: 19rem; 
+  font-size: 2.2rem;
+  z-index: 11px;
+  filter:blur(0.07rem);
+  
+}
+.aniolmaeso2 { 
+  position: relative;
+  margin-top: 11.5rem;
+  margin-left: -0.5rem;
+  font-size: 1.75rem;
+  z-index: 10px;
+  transform: rotate(-90deg);
+}
+
+.adria {
+  float:right;
+  margin-right:22rem;
+  margin-top: 10rem;
+}
+
+.adriaprogramer{
+  position: absolute;
+  filter:blur(0.1rem);
+  z-index: -10px;
+}
+.adria1 {
+  position: relative;
+  margin-top: -1.6rem;
+  margin-right: -12rem; 
+  font-size: 2.2rem;
+  z-index: 12px;
+  filter:blur(0.07rem);
+}
+ 
+.aniol2 {
+  float:left;
+  margin-left:-8rem;
+  margin-top: 10rem;
+}
+
+.adria22 {
+  float:right;
+  margin-right:22rem;
+  margin-top: 10rem;
+}
+
+
+
+.adria2 { 
+  position: relative;
+  margin-top: 11.5rem;
+  margin-right: -31rem;
+  font-size: 1.75rem;
+  z-index: 12px;
+  transform: rotate(90deg);
+}
+
 }
 
 </style>
