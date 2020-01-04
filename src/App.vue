@@ -322,6 +322,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
 }
 h1 {
   margin-top: 8rem;
@@ -345,4 +346,3 @@ h1 {
 
 
 </style>
-
