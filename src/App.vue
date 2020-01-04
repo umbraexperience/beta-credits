@@ -322,13 +322,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 h1 {
   margin-top: 8rem;
   text-align: center;
   margin-left: 0rem;
-  margin-right: 0remn;
+  margin-right: 0rem;
   font-size:1.9rem;
 }
 
@@ -336,9 +336,6 @@ h1 {
   font-size: 1rem;
   text-align: center;
 }
-
-
-
 
 }
 
