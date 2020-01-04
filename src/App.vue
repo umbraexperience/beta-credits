@@ -145,6 +145,7 @@ export default {
   z-index: auto;
   margin-top: 2rem; 
   margin-bottom: 10rem;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -154,7 +155,7 @@ h1 {
 }
 
 
-.p1 {
+.p1  {
   margin-right:3rem;
   font-size: 1.26rem;
 }
@@ -272,6 +273,76 @@ body * {
 h2 {
   filter:blur(0.03rem);
 }
+
+@media screen and (max-width: 450px) and (min-width: 410px) {
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+.aniolnom {
+  font-size: 2.2rem;
+  filter:blur(0.07rem);
+ 
+}
+
+.aniolrol { 
+  font-size: 1.75rem;
+}
+
+.adrianom {
+  font-size: 2.2rem;
+  filter:blur(0.07rem);
+  
+}
+
+.adriarol { 
+  font-size: 1.75rem;
+}
+
+.adria {
+  margin-left:5rem;
+}
+
+.aniol {
+  margin-right: 5rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-top:10rem;
+  margin-bottom: 0rem;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  margin-top: 8rem;
+  text-align: center;
+  margin-left: 0rem;
+  margin-right: 0remn;
+  font-size:1.9rem;
+}
+
+.p1 .p2{
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+
+
+}
+
+
+
 
 </style>
 
