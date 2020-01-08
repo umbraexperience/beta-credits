@@ -2,6 +2,14 @@
   <div id="app">
     <div class="agraiments">
       <div class="flex-container">
+        <div v-for="person in persons" :key="person.id" class="person">
+          <img src="./assets/aniol.png" class="foto" />
+          <h2 class="name font-medium">{{ person.name }}</h2>
+          <h2 class="role font-medium">{{ person.role }}</h2>
+        </div>
+      </div>
+
+      <!--  <div class="flex-container">
         <div class="aniol">
           <img src="./assets/aniol.png" class="foto" />
           <h2 class="aniolnom">Aniol Maeso</h2>
@@ -44,18 +52,12 @@
       </div>
 
       <div class="flex-container">
-        <div class="aniol">
+        <div class="aniol last">
           <img src="./assets/aniol.png" class="foto" />
           <h2 class="aniolnom">Aniol Maeso</h2>
           <h2 class="aniolrol">Videographer</h2>
         </div>
-
-        <div class="adria">
-          <img src="./assets/aniol.png" class="foto" />
-          <h2 class="adrianom">Adrià Crehuet</h2>
-          <h2 class="adriarol">Programmer</h2>
-        </div>
-      </div>
+      </div> -->
 
       <h1 class="ayuda">Agradecimientos</h1>
       <ul class="container flex">
@@ -117,11 +119,62 @@
 <script>
 export default {
   name: "app",
-  components: {}
+  components: {},
+  data: function() {
+    return {
+      persons: [
+        { id: 0, name: "Abel Martínez", role: "Developer", img: "" },
+        { id: 0, name: "Adrià Crehuet", role: "Developer", img: "" },
+        { id: 0, name: "Afra Ramió", role: "Developer", img: "" },
+        { id: 0, name: "Aniol Maeso", role: "Developer", img: "" },
+        { id: 0, name: "Marta Gallego", role: "Developer", img: "" },
+        { id: 0, name: "Marc Vila", role: "Developer", img: "" },
+        { id: 0, name: "Santi Cros", role: "Developer", img: "" }
+      ]
+    };
+  }
 };
 </script>
 
 <style>
+#app {
+  font-family: "Tiempos Headline", Times, serif;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: local("Tiempos Headline Light"),
+    url("./assets/fonts/TiemposHeadline-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: local("Tiempos Headline Regular"),
+    url("./assets/fonts/TiemposHeadline-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: local("Tiempos Headline Medium"),
+    url("./assets/fonts/TiemposHeadline-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+.font-light {
+  font-family: "Tiempos Headline", Times, serif;
+  font-weight: 300;
+}
+.font-regular {
+  font-family: "Tiempos Headline", Times, serif;
+  font-weight: 400;
+}
+.font-medium {
+  font-family: "Tiempos Headline", Times, serif;
+  font-weight: 500;
+}
 .flex {
   padding: 0;
   margin: 0;
@@ -141,91 +194,93 @@ export default {
   flex-wrap: wrap;
 }
 
+.last {
+  border: 2px solid red;
+  align-self: left;
+  justify-items: left;
+}
+
 h1 {
   margin-top: 5rem;
   text-align: left;
   margin-left: 11.5rem;
 }
 
-.p1 {
-  margin-right: 3rem;
-  font-size: 1.26rem;
-}
-
+.p1,
 .p2 {
-  margin-left: 4rem;
-  font-size: 1.26rem;
+  opacity: 0;
 }
 
 .p1 {
-  -webkit-animation: color-change 20s infinite;
-  -moz-animation: color-change 22s infinite;
-  -o-animation: color-change 20s infinite;
-  -ms-animation: color-change 22s infinite;
-  animation: color-change 20s infinite;
-}
-
-.p2 {
-  -webkit-animation: color-change 13s infinite;
+  -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
-  -o-animation: color-change 13s infinite;
+  -o-animation: color-change 14s infinite;
   -ms-animation: color-change 14s infinite;
-  animation: color-change 13s infinite;
+  animation: color-change 14s infinite;
+}
+
+.p2 {
+  -webkit-animation: color-change 14s infinite;
+  -moz-animation: color-change 14s infinite;
+  -o-animation: color-change 14s infinite;
+  -ms-animation: color-change 14s infinite;
+  animation: color-change 14s infinite;
+  animation-delay: 7s;
 }
 
 @-webkit-keyframes color-change {
   0% {
-    color: black;
+    opacity: 0;
   }
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 @-moz-keyframes color-change {
   0% {
-    color: black;
+    opacity: 0;
   }
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 @-ms-keyframes color-change {
   0% {
-    color: black;
+    opacity: 0;
   }
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 @-o-keyframes color-change {
   0% {
-    color: black;
+    opacity: 0;
   }
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 @keyframes color-change {
   0% {
-    color: black;
+    opacity: 0;
   }
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 
@@ -233,17 +288,69 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 8rem;
+
+  flex-wrap: wrap;
+
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .aniol {
   margin-left: 2rem;
 }
-.aniolnom {
-  margin-top: -21rem;
-  font-size: 2.93rem;
-  margin-left: 3.5rem;
+
+.person {
+  width: 100%;
+  margin-top: 8rem;
 }
+
+.person .name {
+  margin-top: -21rem;
+  margin-left: 3.5rem;
+  font-size: 2.2rem;
+}
+
+.person .role {
+  margin-top: 11.5rem;
+  margin-left: -16.2rem;
+  font-size: 1.75rem;
+  transform: rotate(-90deg);
+}
+
+.person:nth-child(even) .role {
+  transform: rotate(90deg);
+  margin-left: 16.2rem;
+}
+
+.person:nth-child(even) .name {
+  margin-left: 0;
+  margin-right: 3.5rem;
+}
+
+.person:last-child {
+  width: 0 auto;
+}
+
+@media screen and (min-width: 640px) {
+  .person {
+    width: 50%;
+  }
+  .person:nth-child(even) {
+    padding-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .person .name {
+    font-size: 2.93rem;
+    margin-top: -21.5rem;
+  }
+  .person .role {
+    margin-top: 10rem;
+    font-size: 2.2rem;
+  }
+}
+
 .aniolrol {
   margin-top: 11.5rem;
   margin-left: -16.2rem;
@@ -285,7 +392,7 @@ body * {
   text-align: center;
   height: 100%;
   font-family: "Tiempos Headline Light", Times, serif;
-  filter: blur(0.07rem);
+  /* filter: blur(0.07rem); */
   transition: filter 2s ease-in-out;
 }
 
@@ -294,6 +401,9 @@ h2 {
 }
 
 @media screen and (max-width: 640px) {
+  /*   * {
+    border: 2px solid red;
+  } */
   html,
   body {
     overflow-x: hidden;
@@ -346,10 +456,22 @@ h2 {
     margin-right: 0rem;
     font-size: 1.9rem;
   }
+}
 
-  .p1 .p2 {
-    font-size: 1rem;
-    text-align: center;
+.p1 .p2 {
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  .p1 {
+    margin-right: 3rem;
+    font-size: 1.26rem;
+  }
+
+  .p2 {
+    margin-left: 4rem;
+    font-size: 1.26rem;
   }
 }
 </style>
