@@ -131,7 +131,6 @@ export default {
   width: 60rem;
   height: 0 auto;
 
-  border: 2px solid blue;
 }
 
 .wrapper {
@@ -149,17 +148,13 @@ export default {
   font-family: "Tiempos Headline", Times, serif;
   font-weight: 500;
   filter: blur(0.04rem);
-
-  
 }
 
 .gracies {
   filter: blur(0.07rem);
   margin-top: 10rem;
-  width: auto
-  
+  text-align: left;
 }
-
 
 .last {
   align-self: left;
@@ -250,11 +245,10 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   flex-wrap: wrap;
-
   max-width: 90rem;
   margin: 0 auto;
+  
 }
 
 .aniol {
@@ -291,7 +285,6 @@ h1 {
 
 .person:last-child {
   width: auto;
-  border: 1px solid red; 
   justify-content: left;
 }
 
@@ -368,17 +361,14 @@ h2 {
   }
   
 }
-
-
 @media screen and (max-width: 640px) {
   .paypal {
    text-align: center;
    font-size: 1rem;
-   border: 1px solid red;
    
   }
   .gracies {
-    margin-top: 7rem;
+    margin-top: 8rem;
     margin-left: 0;
     text-align: center;
   }
@@ -387,6 +377,15 @@ h2 {
     grid-gap: 2rem 2rem;
   }
  
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .gracies {
+    margin-top: 8rem;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 
