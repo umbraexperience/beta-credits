@@ -9,6 +9,13 @@
         </div>
       </div>
 
+    <div class="crowfunding">
+    <h1 class="ayuda">Agradecimientos</h1>
+        <div class="wrapper">
+          <div v-for="mecena in mecenes" :key="mecena.id" class="paypal">{{ mecena.name }}</div>
+        </div>
+    </div>
+
       <!--  <div class="flex-container">
         <div class="aniol">
           <img src="./assets/aniol.png" class="foto" />
@@ -57,7 +64,7 @@
           <h2 class="aniolnom">Aniol Maeso</h2>
           <h2 class="aniolrol">Videographer</h2>
         </div>
-      </div> -->
+      </div> 
 
       <h1 class="ayuda">Agradecimientos</h1>
       <div class="gracies">
@@ -112,8 +119,8 @@
             <p class="p1">persona 3</p>
             <p class="p2">persona 4</p>
           </li>
-        </ul>
-      </div>
+        </ul> 
+      </div> -->
     </div>
   </div>
 </template>
@@ -132,9 +139,32 @@ export default {
         { id: 0, name: "Marta Gallego", role: "Developer", img: "" },
         { id: 0, name: "Marc Vila", role: "Developer", img: "" },
         { id: 0, name: "Santi Cros", role: "Developer", img: "" }
-      ]
+      ],
+
+      mecenes: [
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"},
+        { id: 0, name: "Abel Martínez"}
+      ],
     };
   }
+
+
 };
 </script>
 
@@ -200,23 +230,21 @@ export default {
   border: 2px solid blue;
 }
 
-.gracies {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid green;
-  height: 0 auto;
-  width: 0 auto;
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  width:90%;
+  justify-content: space-evenly;
+
+
+  border: 2px solid yellow;
 }
 
-.p1 {
-    margin-right: 3rem;
-    font-size: 1.26rem;
-}
+.paypal {
+  border: 2px solid red;
+  
 
-.p2 {
-    margin-left: 4rem;
-    font-size: 1.26rem;
 }
 
 .last {
