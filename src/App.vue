@@ -38,29 +38,32 @@ export default {
 
       mecenes: [
         { id: 0, name: "Enric Crehuet"},
-        { id: 0, name: "Alfonso Ortega"},
-        { id: 0, name: "Iván Cortés"},
-        { id: 0, name: "Santi Ramió"},
-        { id: 0, name: "Mar Palma"},
-        { id: 0, name: "Aina Alsina"},
-        { id: 0, name: "Adrià Solà"},
-        { id: 0, name: "Carles Ponce"},
-        { id: 0, name: "Ferran Crehuet"},
-        { id: 0, name: "Roser Canals"},
-        { id: 0, name: "Laura Amargant"},
-        { id: 0, name: "Mayra Segura"},
-        { id: 0, name: "Xixi Chen"},
-        { id: 0, name: "David Monje"},
-        { id: 0, name: "Roser Carbonell"},
-        { id: 0, name: "Encarna Jiménez"},
-        { id: 0, name: "Tania Tarrés"},
-        { id: 0, name: "Èric Bautista"},
-        { id: 0, name: "Tania Muñoz"},
-        { id: 0, name: "Marc Rovira"},
-        { id: 0, name: "Marta Germana"},
-        { id: 0, name: "Roser Juanola"},
-        { id: 0, name: "Pilar Calatayud"},
-        { id: 0, name: "Enrique Cros"}
+        { id: 1, name: "Alfonso Ortega"},
+        { id: 2, name: "Iván Cortés"},
+        { id: 3, name: "Santi Ramió"},
+        { id: 4, name: "Mar Palma"},
+        { id: 5, name: "Aina Alsina"},
+        { id: 6, name: "Adrià Solà"},
+        { id: 7, name: "Carles Ponce"},
+        { id: 8, name: "Ferran Crehuet"},
+        { id: 9, name: "Roser Canals"},
+        { id: 10, name: "Laura Amargant"},
+        { id: 11, name: "Mayra Segura"},
+        { id: 12, name: "Xixi Chen"},
+        { id: 13, name: "David Monje"},
+        { id: 14, name: "Roser Carbonell"},
+        { id: 15, name: "Encarna Jiménez"},
+        { id: 16, name: "Tania Tarrés"},
+        { id: 17, name: "Èric Bautista"},
+        { id: 18, name: "Tania Muñoz"},
+        { id: 19, name: "Marc Rovira"},
+        { id: 20, name: "Ariadna Gallego"},
+        { id: 21, name: "Roser Juanola"},
+        { id: 22, name: "Pilar Subirós"},
+        { id: 23, name: "Pilar Calatayud"},
+        { id: 24, name: "Enrique Cros"},
+        { id: 25, name: "Marta Peiró"},
+        { id: 26, name: "Joan Maeso"}
       ],
     };
   }
@@ -148,6 +151,7 @@ export default {
   font-family: "Tiempos Headline", Times, serif;
   font-weight: 500;
   filter: blur(0.04rem);
+  opacity: 0;
 }
 
 .gracies {
@@ -156,10 +160,7 @@ export default {
   text-align: left;
 }
 
-.last {
-  align-self: left;
-  justify-items: left;
-}
+
 
 h1 {
   margin-top: 5rem;
@@ -285,7 +286,8 @@ h1 {
 
 .person:last-child {
   width: auto;
-  justify-content: left;
+  align-self: flex-start;
+  border: 1px solid red;
 }
 
 .aniolrol {
