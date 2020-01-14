@@ -12,7 +12,7 @@
 
     <div class="crowfunding">
     <h1 class="gracies">Agradecimientos </h1>
-        <div class="wrapper">
+        <div class="grid-container">
           <div v-for="mecena in mecenes" :key="mecena.id" class="paypal">{{ mecena.name }}</div>
         </div>
     </div>
@@ -27,13 +27,13 @@ export default {
   data: function() {
     return {
       persons: [
-        { id: 0, name: "Marc Vila", role: "Developer", img: "" },
-        { id: 0, name: "Santi Cros", role: "Developer", img: "" },
-        { id: 0, name: "Abel Martínez", role: "Developer", img: "" },
-        { id: 0, name: "Adrià Crehuet", role: "Developer", img: "" },
-        { id: 0, name: "Afra Ramió", role: "Developer", img: "" },
-        { id: 0, name: "Aniol Maeso", role: "Developer", img: "" },
-        { id: 0, name: "Marta Gallego", role: "Developer", img: "" }
+        { id: 31, name: "Marc Vila", role: "Developer", img: "" },
+        { id: 32, name: "Santi Cros", role: "Developer", img: "" },
+        { id: 33, name: "Abel Martínez", role: "Developer", img: "" },
+        { id: 34, name: "Adrià Crehuet", role: "Developer", img: "" },
+        { id: 35, name: "Afra Ramió", role: "Developer", img: "" },
+        { id: 36, name: "Aniol Maeso", role: "Developer", img: "" },
+        { id: 37, name: "Marta Gallego", role: "Developer", img: "" }
       ],
 
       mecenes: [
@@ -76,6 +76,11 @@ export default {
 #app {
   font-family: "Tiempos Headline", Times, serif;
   font-weight: 300;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @font-face {
@@ -114,7 +119,11 @@ export default {
   font-weight: 500;
   filter: blur(0.07rem);
 }
-.flex {
+
+.agraiments {
+  padding-top:120rem;
+}
+ .flex {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -125,18 +134,19 @@ export default {
   display: -webkit-flex;
   display: flex;
 
-  -webkit-flex-flow: row wrap;
   justify-content: center;
-  z-index: auto;
+  z-index: 1;
   margin-top: 2rem;
   margin-bottom: 10rem;
   flex-wrap: wrap;
   width: 60rem;
-  height: 0 auto;
+  height: 0 auto; 
 
-}
+} 
 
-.wrapper {
+
+
+.grid-container {
   display: grid;
   grid-gap: 2rem 1rem;
   grid-template-columns: repeat(5, 1fr);
@@ -153,6 +163,8 @@ export default {
   filter: blur(0.04rem);
   opacity: 0;
 }
+
+
 
 .gracies {
   filter: blur(0.07rem);
@@ -285,9 +297,7 @@ h1 {
 }
 
 .person:last-child {
-  width: auto;
-  align-self: flex-start;
-  border: 1px solid red;
+
 }
 
 .aniolrol {
@@ -374,7 +384,7 @@ h2 {
     margin-left: 0;
     text-align: center;
   }
-  .wrapper {
+  .grid-container {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem 2rem;
   }
@@ -387,6 +397,10 @@ h2 {
     margin-top: 8rem;
     margin-left: 0;
     text-align: center;
+  }
+
+  .agraiments {
+    margin-top: -20rem;
   }
 }
 
