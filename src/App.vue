@@ -63,7 +63,9 @@ export default {
         { id: 23, name: "Pilar Calatayud"},
         { id: 24, name: "Enrique Cros"},
         { id: 25, name: "Marta Peiró"},
-        { id: 26, name: "Joan Maeso"}
+        { id: 26, name: "Joan Maeso"},
+         { id: 25, name: "Jordi Cros"},
+        { id: 26, name: "Mª Josefa Herrero"}
       ],
     };
   }
