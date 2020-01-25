@@ -15,6 +15,13 @@
         <div class="grid-container">
           <div v-for="mecena in mecenes" :key="mecena.id" class="paypal">{{ mecena.name }}</div>
         </div>
+        <div class="patrocinadors">
+          <img class="logo" src="./assets/logo1.png" alt="Cinema Truffaut">
+          <img class="logos" src="./assets/logo2.png" alt="BTM">
+          <img class="logo" src="./assets/logo3.png" alt="Doctor Says">
+          <img class="logos" src="./assets/logo4.png" alt="Desfilart"> 
+          <img class="logo" src="./assets/logo4.png" alt="Teatre Bescanó">
+         </div>
     </div>
     </div>
   </div>
@@ -64,7 +71,7 @@ export default {
         { id: 24, name: "Enrique Cros"},
         { id: 25, name: "Marta Peiró"},
         { id: 26, name: "Joan Maeso"},
-         { id: 25, name: "Jordi Cros"},
+        { id: 25, name: "Jordi Cros"},
         { id: 26, name: "Mª Josefa Herrero"}
       ],
     };
@@ -83,6 +90,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 @font-face {
@@ -123,7 +131,7 @@ export default {
 }
 
 .agraiments {
-  padding-top:120rem;
+  height: 100%;
 }
  .flex {
   padding: 0;
@@ -146,7 +154,10 @@ export default {
 
 } 
 
-
+.flex-container::after {
+  content: "";
+  flex: auto;
+}
 
 .grid-container {
   display: grid;
@@ -166,15 +177,11 @@ export default {
   opacity: 0;
 }
 
-
-
 .gracies {
   filter: blur(0.07rem);
   margin-top: 10rem;
   text-align: left;
 }
-
-
 
 h1 {
   margin-top: 5rem;
@@ -183,7 +190,7 @@ h1 {
 }
 
 
-.paypal:nth-child(odd) {
+.paypal:nth-child(odd), .logo {
   -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
   -o-animation: color-change 14s infinite;
@@ -191,7 +198,7 @@ h1 {
   animation: color-change 14s infinite;
 } 
 
-.paypal:nth-child(even)  {
+.paypal:nth-child(even), .logos  {
   -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
   -o-animation: color-change 14s infinite;
@@ -199,6 +206,27 @@ h1 {
   animation: color-change 14s infinite;
   animation-delay: 7s;
 }
+
+.patrocinadors{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 3rem; 
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+
+
+.logo, .logos {
+  width: 120px;
+  height: 80px;
+  opacity: 0%;
+  filter: blur(0.04rem);
+}
+
 
 @-webkit-keyframes color-change {
   0% {
@@ -298,9 +326,6 @@ h1 {
   margin-right: 3.5rem;
 }
 
-.person:last-child {
-
-}
 
 .aniolrol {
   margin-top: 11.5rem;
@@ -345,7 +370,6 @@ body * {
   text-align: center;
   height: 100%;
   font-family: "Tiempos Headline Light", Times, serif;
-  /* filter: blur(0.07rem); */
   transition: filter 2s ease-in-out;
 }
 
@@ -364,7 +388,7 @@ h2 {
  
 }
 
-@media screen and (min-width: 1000px) {
+@media screen  and (min-width: 1000px) and (max-width: 1024px) {
   .person .name {
     font-size: 2.93rem;
     margin-top: -21.5rem;
@@ -373,6 +397,8 @@ h2 {
     margin-top: 10rem;
     font-size: 2.2rem;
   }
+ 
+ 
   
 }
 @media screen and (max-width: 640px) {
@@ -390,6 +416,12 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem 2rem;
   }
+
+  .patrocinadors {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 2rem;
+  }
+
  
 }
 
@@ -401,10 +433,9 @@ h2 {
     text-align: center;
   }
 
-  .agraiments {
-    margin-top: -20rem;
-  }
+
 }
+
 
 
 </style>
