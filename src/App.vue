@@ -190,7 +190,7 @@ h1 {
 }
 
 
-.paypal:nth-child(odd), .logo {
+.paypal:nth-child(odd), .logo:nth-child(odd) {
   -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
   -o-animation: color-change 14s infinite;
@@ -198,7 +198,7 @@ h1 {
   animation: color-change 14s infinite;
 } 
 
-.paypal:nth-child(even), .logos  {
+.paypal:nth-child(even), .logos:nth-child(even)  {
   -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
   -o-animation: color-change 14s infinite;
@@ -210,21 +210,22 @@ h1 {
 .patrocinadors{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 70%;
   margin: 0 auto;
   padding-left: 3rem; 
   margin-top: 3rem;
   margin-bottom: 5rem;
+
+  
 }
-
-
 
 .logo, .logos {
   width: 120px;
   height: 80px;
   opacity: 0%;
   filter: blur(0.04rem);
+ 
 }
 
 
@@ -385,6 +386,8 @@ h2 {
   .person:nth-child(even) {
     padding-top: 8rem;
   }
+
+
  
 }
 
@@ -418,10 +421,11 @@ h2 {
   }
 
   .patrocinadors {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem 1rem;
+    padding: 0rem;
   }
-
+  
  
 }
 
