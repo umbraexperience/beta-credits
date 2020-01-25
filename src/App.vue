@@ -17,9 +17,9 @@
         </div>
         <div class="patrocinadors">
           <img class="logo" src="./assets/logo1.png" alt="Cinema Truffaut">
-          <img class="logos" src="./assets/logo2.png" alt="BTM">
+          <img class="logo" src="./assets/logo2.png" alt="BTM">
           <img class="logo" src="./assets/logo3.png" alt="Doctor Says">
-          <img class="logos" src="./assets/logo4.png" alt="Desfilart"> 
+          <img class="logo" src="./assets/logo4.png" alt="Desfilart"> 
           <img class="logo" src="./assets/logo4.png" alt="Teatre Bescanó">
          </div>
     </div>
@@ -198,7 +198,7 @@ h1 {
   animation: color-change 14s infinite;
 } 
 
-.paypal:nth-child(even), .logos:nth-child(even)  {
+.paypal:nth-child(even), .logo:nth-child(even)  {
   -webkit-animation: color-change 14s infinite;
   -moz-animation: color-change 14s infinite;
   -o-animation: color-change 14s infinite;
@@ -220,7 +220,7 @@ h1 {
   
 }
 
-.logo, .logos {
+.logo {
   width: 120px;
   height: 80px;
   opacity: 0%;
@@ -425,7 +425,8 @@ h2 {
     grid-gap: 1rem 1rem;
     padding: 0rem;
   }
-  
+
+
  
 }
 
